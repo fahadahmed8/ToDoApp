@@ -2,13 +2,20 @@
 <html ng-app="TodoApp">
 <head>
 	<script type="text/javascript" src="angular.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="todo.js"></script>
-	<title></title>
+	<title>ToDo App</title>
 </head>
 <body>
 	<div ng-controller="TodoCtrl">
-		{{totalTodos}}
+		<h1>Total Todos: {{totalTodos}}</h1>
+		<ul class="list-unstyled">
+			<li ng-repeat="todo in todos">
+				<input type="checkbox" ng-model="todo.done">
+				<span class="done-{{todo.done}}">{{todo.text}}</span>
+			</li>
+		</ul>
 	</div>
 
 </body>
