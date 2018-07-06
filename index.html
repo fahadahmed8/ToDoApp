@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html ng-app="TodoApp">
 <head>
-	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="todo.js"></script>
+	<script type="text/javascript" src="js/todo.js"></script>
 	<title>ToDo App</title>
 </head>
 <body>
@@ -13,17 +13,17 @@
 		<div ng-controller="TodoCtrl" class="jumbotron" style="margin: auto; width: 60%;">
 			<h2>Total Todos: {{getTotalTodos()}}</h2>
 			<ul class="list-unstyled">
-				<li ng-repeat="todo in todos">
+				<li ng-repeat="todo in todos" style="font-size: 16px;">
 					<input type="checkbox" ng-model="todo.done">
 					<span class="done-{{todo.done}}">{{todo.text}}</span>
 				</li>
 			</ul>
 			<form class="form-horizontal">
 				<input type="text" ng-model="formTodoText" ng-model-instant placeholder="Add todo">
-				<button class="btn btn-primary btn-sm" ng-click="addTodo()"><i class="icon-plus"></i>Add</button>
+				<button class="btn btn-primary" ng-click="addTodo()"><i class="icon-plus"></i>Add</button>
 			</form>
 			<br />
-			<button class="btn btn-danger btn-sm" ng-click="clearCompleted()"><i class="icon-trash"></i>Clear Completed</button>
+			<button class="btn btn-danger" ng-click="clearCompleted()"><i class="icon-trash"></i>Clear Completed</button>
 		</div>
 	</div>
 </body>
