@@ -5,4 +5,9 @@ angular.module('TodoApp', [])
 			{text:'Learn angularJS', done:false},
 			{text:'Build an App', done:false},
 		];
+
+		$scope.addTodo = function(){
+			$scope.todos.push({text:$scope.formTodoText, done:false});
+			$scope.formTodoText = "";
+		};
 	});
