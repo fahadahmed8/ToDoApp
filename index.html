@@ -10,16 +10,17 @@
 </head>
 <body>
 	<div class="container">
-		<div ng-controller="TodoCtrl" class="jumbotron" style="margin: auto; width: 60%;">
-			<h2>Total Todos: {{getTotalTodos()}}</h2>
+		<div ng-controller="TodoCtrl" class="jumbotron" style="margin:50px auto; width: 60%;">
+			<h1>Total Todos: {{getTotalTodos()}}</h1>
+			<h2><em>Enter a todo in text box</em></h2>
 			<ul class="list-unstyled">
-				<li ng-repeat="todo in todos" style="font-size: 16px;">
+				<li ng-repeat="todo in todos" style="font-size: 20px;">
 					<input type="checkbox" ng-model="todo.done">
 					<span class="done-{{todo.done}}">{{todo.text}}</span>
 				</li>
 			</ul>
 			<form class="form-horizontal">
-				<input type="text" ng-model="formTodoText" ng-model-instant placeholder="Add todo">
+				<input style="height: 34px; padding: 5px; border-radius: 5px;" type="text" ng-model="formTodoText" ng-model-instant placeholder="Add todo">
 				<button class="btn btn-primary" ng-click="addTodo()"><i class="icon-plus"></i>Add</button>
 			</form>
 			<br />
