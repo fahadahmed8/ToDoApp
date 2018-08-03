@@ -1,4 +1,39 @@
+body {
+	background-color: #999;
+}
+
 .done-true{
 	text-decoration: line-through;
 	color: grey;
 }
+
+.jumbotron {
+	box-shadow: 8px 8px 25px;
+}
+
+#todo-text {
+ 	outline: 0;
+  	padding: 0.7rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+h1 {
+	font-family: 'Prompt', sans-serif;
+	font-weight: 600;
+}
+
+h2, li {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	padding: 5px;
+}
+
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+	padding: 8px;
+	margin-top: -2px;
+	font-weight: 400;
+}
+
